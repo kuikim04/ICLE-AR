@@ -14,8 +14,9 @@ namespace Script
         public float soundVolume { get; set; }
         public float musicVolume { get; set; }
         public bool isMute { get; set; }
-       
 
+        public bool isLogin;
+        public bool isRegister;
         private void Awake()
         {
             if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
@@ -28,13 +29,15 @@ namespace Script
 
             soundVolume = 1;
             musicVolume = 1;
-
             mapNumSelect = 0;
             levelNumSelect = 0;
             numQulity = 0;
+
             isMute = false;
+            isLogin = false;
+            isRegister = false;
         }
-       
+
         // Start is called before the first frame update
         void Start()
         {

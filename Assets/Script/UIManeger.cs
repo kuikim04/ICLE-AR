@@ -32,13 +32,16 @@ namespace Script
         // Start is called before the first frame update
         void Start()
         {
-
+            if (Singleton.Instance.isLogin)
+            {
+                uiMainMenu.SetActive(true);
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
+           
         }
         public void FirstPage()
         {
@@ -55,13 +58,17 @@ namespace Script
 
         public void RegisterPage()
         {
+            Singleton.Instance.isRegister = true;
+
             uiLogin.SetActive(false);
             uiRegister.SetActive(true);
         }
         public void RegisterBtn()
         {
             uiRegister.SetActive(false);
-            uiLogin.SetActive(true);
+            uiLogin.SetActive(true); 
+            Singleton.Instance.isRegister = false;
+
         }
         #endregion
 
