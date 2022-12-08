@@ -34,6 +34,7 @@ namespace Script
         {
             if (Singleton.Instance.isLogin)
             {
+                uiSelectLevel.SetActive(true);
                 uiMainMenu.SetActive(true);
             }
         }

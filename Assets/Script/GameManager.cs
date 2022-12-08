@@ -27,7 +27,6 @@ namespace Script
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(Singleton.Instance.levelNumSelect);
             
             #region check map
             if (Singleton.Instance.mapNumSelect == 1)
