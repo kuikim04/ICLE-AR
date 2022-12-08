@@ -11,11 +11,6 @@ namespace Script
         [SerializeField] Toggle togglesR1, togglesR2, togglesR3;
         public ToggleGroup allowSwith;
 
-        public Toggle currentSelection
-        {
-            get { return allowSwith.ActiveToggles().FirstOrDefault(); }
-        }
-
         private void Awake()
         {
             if (Singleton.Instance.numQulity == 1)
@@ -40,8 +35,7 @@ namespace Script
         }
         private void Update()
         {
-            Debug.Log(QualitySettings.GetQualityLevel());
-            Debug.Log(PlayerPrefs.GetInt("ToogleSelected"));
+            
         }
         private void Start()
         {
@@ -57,18 +51,18 @@ namespace Script
         }
         public void ToggleResolution1Selected()
         {
-            PlayerPrefs.SetInt("ToogleSelected", 1);
+            
             Singleton.Instance.numQulity = 1;
         }
         public void ToggleResolution2Selected()
         {
-            PlayerPrefs.SetInt("ToogleSelected", 2);
+            
             Singleton.Instance.numQulity = 2;
         }
         public void ToggleResolution3Selected()
         {
-            PlayerPrefs.SetInt("ToogleSelected", 3);
-            Singleton.Instance.numQulity = 1;
+            
+            Singleton.Instance.numQulity = 3;
 
         }
 

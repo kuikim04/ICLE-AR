@@ -26,6 +26,7 @@ namespace Script
             SceneManager.LoadScene(0);
             GameManager.isPause = false;
             Singleton.Instance.levelNumSelect = 0;
+            Singleton.Instance.readyPlay = false;
         }
     }
 }

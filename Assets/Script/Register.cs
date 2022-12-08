@@ -65,13 +65,16 @@ namespace Script
 
 
         void writeStuffToFile()
-        {
-            
+        {       
             bool isExists = false;
+
             Singleton.Instance.isRegister = true;
             //bool isDone = false;
 
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+
+            bool hasAt = emailInput.text.IndexOf('@') > 0 && emailInput.text.IndexOf('.') > 0;
+            
 
             foreach (var i in credentials)
             {
@@ -87,9 +90,10 @@ namespace Script
                 warnIsExists.SetActive(true);
                 // Debug.Log($"Username '{usernameInput.text}' already exists");
             }
-            else if (usernameInput.text != "" && passwordInput.text != "" && emailInput.text.IndexOf('@') == 1 && dateInput.text != "")
+            else if (usernameInput.text != "" && passwordInput.text != "" && hasAt && dateInput.text != "")
             {
                 successRegister.SetActive(true);
+                StartCoroutine(RegisterSuccess());
                 credentials.Add(usernameInput.text + ":" + passwordInput.text);
                 File.WriteAllLines(Application.dataPath + "/credentials.txt", (String[])credentials.ToArray(typeof(string)));
 
@@ -109,19 +113,17 @@ namespace Script
             {
                 registerNotDone.SetActive(true);
             }
+     
 
+        }
 
-            /*if(emailInput.text.IndexOf('@') < 1 && emailInput.text.IndexOf('@') > 1 && emailInput.text.IndexOf('.') < 1)
-            {
-                Debug.Log("Email wrong");
-            }
-            if (dateInput.text == "" || dateInput.text.IndexOf("/") < 2 || dateInput.text.Length < 10)
-            {
-                Debug.Log("date wrong");
-            }*/
-
-
-
+        IEnumerator RegisterSuccess()
+        {
+            yield return new WaitForSeconds(2);
+            usernameInput.text = "";
+            passwordInput.text = "";
+            emailInput.text = "";
+            dateInput.text = "";
         }
     }
 }

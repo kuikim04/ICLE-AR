@@ -42,7 +42,6 @@ namespace Script
         // Update is called once per frame
         void Update()
         {
-           
         }
         public void FirstPage()
         {
@@ -164,139 +163,163 @@ namespace Script
         #region Select Map
         public void SelectMap1()
         {
-            if(Singleton.Instance.mapNumSelect == 1)
+            if(Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if(Singleton.Instance.mapNumSelect == 2)
+
+            if(Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if (Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 1;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap2()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if (Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 2;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap3()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if (Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
-            
+
             Singleton.Instance.mapNumSelect = 3;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap4()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if (Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 4;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap5()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if(Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 5;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap6()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if(Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 6;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap7()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if (Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 7;
+            Singleton.Instance.readyPlay = true;
         }
         public void SelectMap8()
         {
-            if (Singleton.Instance.mapNumSelect == 1)
+            if (Singleton.Instance.levelNumSelect == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("SceneLV1");
             }
-            if (Singleton.Instance.mapNumSelect == 2)
+
+            if (Singleton.Instance.levelNumSelect == 2)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("SceneLV2");
             }
-            if (Singleton.Instance.mapNumSelect == 3)
+
+            if (Singleton.Instance.levelNumSelect == 3)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("SceneLV3");
             }
 
             Singleton.Instance.mapNumSelect = 8;
+            Singleton.Instance.readyPlay = true;
         }
         #endregion
 

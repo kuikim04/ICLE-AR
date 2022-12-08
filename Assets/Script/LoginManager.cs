@@ -12,6 +12,8 @@ namespace Script
     {
         public TMPro.TMP_InputField usernameInput;
         public TMPro.TMP_InputField passwordInput;
+        public TMPro.TMP_InputField dateInput;
+
         public Button loginButton;
 
         public GameObject mainMenuPage;
@@ -47,7 +49,15 @@ namespace Script
 
         }
 
-
+        private void Update()
+        {
+            if(Singleton.Instance.isRegister)
+            {
+                usernameInput.text = "";
+                passwordInput.text = "";
+                dateInput.text = "";
+            }
+        }
 
         // Update is called once per frame
         void login()
